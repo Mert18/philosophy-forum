@@ -1,5 +1,4 @@
 
-
 .main {
     display: flex;
     .content{
@@ -9,8 +8,39 @@
     .today {
         flex: 2;
         padding: 2rem;
-
+        &__infotoday {
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        &__wordoftheday {
+            padding: 2rem;
+        }
     }
+}
+
+.infotoday {
+    h2 {
+        margin-bottom: 1rem;
+    }
+}
+.wordoftheday {
+    h2 {
+        margin-bottom: 1rem;
+    }
+}
+
+.wordoftheday {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.infotoday {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .section {
@@ -19,6 +49,7 @@
     height: 15vh;
     border: 3px solid black;
     margin: 1.2rem;
+    padding: .6rem;
     &__img {
         img {
         display: block;

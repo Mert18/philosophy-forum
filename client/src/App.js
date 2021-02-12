@@ -26,8 +26,12 @@ const App = () => {
                     <SectionList />
                 </section>
                 <section className="today">
-                    <InfoToday />
-                    <WordOfTheDay />
+                    <div className="today__infotoday">
+                        <InfoToday />
+                    </div>
+                    <div className="today__wordoftheday">
+                        <WordOfTheDay />
+                    </div>
                 </section>
             </main>
 
