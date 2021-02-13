@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/main.scss'
+import entrancelogo from '../assets/entrancelogo.svg'
 
 const Entrance = () => {
     return (
@@ -10,6 +11,7 @@ const Entrance = () => {
             </div>
 
             <div className="entrance__img">
+                <img src={entrancelogo} alt="ent logo" width="150px" />
             </div>
 
         </div>
