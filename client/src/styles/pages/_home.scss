@@ -1,0 +1,55 @@
+
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    &__entrance {
+        align-items: center;
+        display: flex;
+        font-size: 2rem;
+        grid-column: 1 / -1;
+        justify-content: center;
+        padding: 3rem;
+    }
+
+    &__content {
+        grid-column: 1 / 8;
+        margin: 1rem 2rem;
+        padding: 2rem;
+    }
+    &__today {
+        grid-column: 8 / 13;
+        margin: 1rem 2rem;
+        padding: 2rem;
+    }
+}
+
+.section {
+    text-align: start;
+    padding: 2rem;
+    background-color: $primary-white;
+    display: flex;
+    align-items: center;
+    &__pic {
+        padding: 1rem;
+    }
+    
+}
+
+.infotoday {
+    padding: 1rem;
+    &__title {
+        padding: 1rem 0rem;
+    }
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 1rem;
+        }
+    }
+}

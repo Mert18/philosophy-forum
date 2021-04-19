@@ -1,45 +1,50 @@
 import React from 'react';
 
-import InfoToday from './components/InfoToday';
-import WordOfTheDay from './components/WordOfTheDay';
-import SectionList from './components/SectionList';
+
 import Navbar from './components/Navbar';
-import Entrance from './components/Entrance'
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
+
+import Home from './components/pages/Home';
+import Wiki from './components/pages/Wiki';
+import Community from './components/pages/Community';
+import Register from './components/pages/Register.js';
+import Login from './components/pages/Login';
+import HeaderProf from './components/HeaderProf';
 
 import './styles/main.scss'
 
 const App = () => {
     return (
-        <diV className="container">
-
-            <header className="header">
-                <section className="nav">
-                    <Navbar />
-                </section>
-                <section className="enter">
-                    <Entrance />
-                </section>
-            </header>
-
-            <main className="main">
-                <section className="content">
-                    <SectionList />
-                </section>
-                <section className="today">
-                    <div className="today__infotoday">
-                        <InfoToday />
+        <Router>
+            <div className="container">
+                <header className="container__header">
+                    <div className="container__header__title">
+                        <h2>Philosophy Forum</h2>
                     </div>
-                    <div className="today__wordoftheday">
-                        <WordOfTheDay />
+                    <div className="container__header__nav">
+                        <Navbar />
                     </div>
-                </section>
-            </main>
+                    <div className="container__header__user">
+                        <HeaderProf />
+                    </div>
+                </header>
+                <div className="container__page">
+                    <Switch>
+                        <Route path="/" exact component={Home} />
+                        <Route path="/community" component={Community} />
+                        <Route path="/wiki" component={Wiki} />
+                        <Route path="/register" component={Register} />
+                        <Route path="/login" component={Login} />
+                    </Switch>
+                </div>
+            </div>
+        </Router>
 
-            <footer>
-
-            </footer>
-
-        </diV>
     )
 }
 

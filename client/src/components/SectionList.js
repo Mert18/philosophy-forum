@@ -7,10 +7,6 @@ const SectionList = () => {
             <Section />
             <Section />
             <Section />
-            <Section />
-            <Section />
-            <Section />
-            <Section />
         </div>
     )
 }
