@@ -27,11 +27,35 @@
 .section {
     text-align: start;
     padding: 2rem;
-    background-color: $primary-white;
     display: flex;
     align-items: center;
+    color: white;
+    border-radius: 1.5rem;
+    height: 30vh;
+    position: relative;
+    transition: all .3s;
     &__pic {
-        padding: 1rem;
+        filter: grayscale(70%);
+        transition: all .3s;
+
+        img {
+            border-bottom-right-radius: 2rem;
+        }
+
+        &:hover {
+            filter: grayscale(0);
+            cursor: pointer;
+        }
+    }
+    &__text {
+        user-select: none;
+        font-size: 1.3rem;
+        padding: .4rem;
+        position: absolute;
+        top: 0;
+        left:0;
+        background-color: $primary-white;
+        color: $primary-black;
     }
     
 }
@@ -52,4 +76,27 @@
             border-radius: 1rem;
         }
     }
+}
+
+@media (max-width: 1236px) {
+    .main__content {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main__today {
+        grid-column: 1 / -1;
+    }
+
+    .section__pic {
+        filter: grayscale(0);
+        img {
+            width: 600px;
+        }
+    }
+}
+
+@media (max-width: 880px){
+
 }
